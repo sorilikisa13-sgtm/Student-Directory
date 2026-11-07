@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CampusConnect | Student Directory</title><link rel="stylesheet" href="style.css"></head>
+<body><div class="layout">
+<aside class="sidebar"><div class="brand"><b>CC</b><div><strong>CampusConnect</strong><small>Student directory</small></div></div>
+<p class="label">STUDENT CATEGORY</p>
+<nav><button class="category active" data-category="All">All students <span id="allCount">0</span></button>
+<button class="category" data-category="Junior">Junior <span id="juniorCount">0</span></button>
+<button class="category" data-category="Senior">Senior <span id="seniorCount">0</span></button></nav>
+<p class="label dept-label">DEPARTMENTS</p><select id="departmentFilter"><option value="All">All departments</option></select>
+<p class="hint">Select a category or department to filter the student list.</p><div class="saved">● Saved in this browser</div></aside>
+<main><header><div><p class="eyebrow">ASTU • STUDENT MANAGEMENT</p><h1>Student Directory</h1><p class="muted">Add, organize, search, and manage student information.</p></div>
+<button id="themeToggle" class="theme">☾ <span id="themeText">Dark mode</span></button></header>
+<section class="stats"><article><span>Total students</span><strong id="totalStat">0</strong><small>All saved records</small></article>
+<article><span>Junior students</span><strong id="juniorStat">0</strong><small>Junior category</small></article>
+<article><span>Senior students</span><strong id="seniorStat">0</strong><small>Senior category</small></article></section>
+<section class="panel"><div class="section-head"><div><p class="eyebrow">STUDENT DETAILS</p><h2 id="formTitle">Add a student</h2></div><small>Fields marked * are required</small></div>
+<form id="studentForm"><div class="fields">
+<label>Full name *<input id="studentName" required maxlength="70" placeholder="Enter student's full name"></label>
+<label>Department *<input id="studentDepartment" required maxlength="70" placeholder="Type department name"></label>
+<label>Academic year / batch *<input id="studentYear" required maxlength="40" placeholder="e.g. 3rd Year or 2024 Batch"></label>
+<label>Category *<select id="studentCategory" required><option value="">Select category</option><option>Junior</option><option>Senior</option></select></label>
+</div><div class="form-actions"><button class="primary" id="saveButton">＋ Add student</button><button class="secondary hidden" id="cancelEdit" type="button">Cancel edit</button><span id="formMessage"></span></div></form></section>
+<section class="panel directory"><div class="directory-head"><div><p class="eyebrow">DIRECTORY</p><h2 id="listTitle">All students</h2><p class="muted" id="listDescription">Showing every saved student and all their information.</p></div>
+<input id="searchInput" type="search" placeholder="Search name, ID, department..."></div>
+<div class="table-wrap"><table><thead><tr><th>Student</th><th>Student ID</th><th>Department</th><th>Academic year / batch</th><th>Category</th><th>Actions</th></tr></thead><tbody id="studentTableBody"></tbody></table>
+<div id="emptyState" class="empty hidden"><b>No students found</b><p>Try another category or search term, or add a student.</p></div></div>
+<div class="table-foot"><span id="resultCount">0 students</span><span>Saved automatically in this browser.</span></div></section>
+<footer>CampusConnect Student Directory • Practice project</footer></main></div><script src="script.js"></script></body></html>
