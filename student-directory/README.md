@@ -220,7 +220,14 @@ Adama Science and Technology University (ASTU)
 
 GitHub: https://github.com/sorilikisa13-sgtm
 
----
+# Student Directory Management System
+
+🌐 **Live Demo:** https://student-directory-app-mu.vercel.app
+
+A web-based system for managing student records, departments, and student information.
+
+## Deployment
+This project is deployed using Vercel and connected to GitHub for automatic deployment.
 
 ## ⭐ Support
 
